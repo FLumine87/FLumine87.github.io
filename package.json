@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "node build.js",
+    "deploy": "npm run build && npx gh-pages -d dist"
   },
   "keywords": [],
   "author": "Jari Korhonen",
@@ -15,5 +17,8 @@
     "ejs": "^3.1.9",
     "express": "^4.22.1",
     "socket.io": "^4.8.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
